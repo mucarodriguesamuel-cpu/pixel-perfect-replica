@@ -890,8 +890,8 @@ function Home() {
             <Reveal delay={150}>
               <div className="h-[38vh] w-full overflow-hidden border border-border md:h-[52vh]">
                 <iframe
-               title="Mapa da região do Ipiranga, São Paulo"
-            src="https://www.google.com/maps?q=Ipiranga%2C%20S%C3%A3o%20Paulo&output=embed"
+             title="Mapa — Rua Doutor Elísio de Castro, 336"
+src="https://www.google.com/maps?q=Rua%20Doutor%20El%C3%ADsio%20de%20Castro%2C%20336%20-%20Ipiranga%2C%20S%C3%A3o%20Paulo&output=embed"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   className="h-full w-full grayscale-[35%]"
