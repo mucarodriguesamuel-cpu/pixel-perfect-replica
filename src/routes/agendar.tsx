@@ -172,11 +172,7 @@ function Agendar() {
                         }`}
                       >
                         <span className="font-display text-2xl">{s.name}</span>
-                        <span className="mt-2 block text-sm text-muted-foreground">
-                          {s.description}
-     <span className="mt-2 block text-sm text-muted-foreground">
-  {s.description}
-</span>
+
                       </button>
                     );
                   })}
