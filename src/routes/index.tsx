@@ -865,17 +865,26 @@ function Home() {
                 <br />
                 São Paulo
               </h2>
-              <span className="hairline mt-8 w-20" />
-              <div className="mt-8 space-y-2 text-sm text-muted-foreground">
+                         <div className="mt-8 space-y-2 text-sm text-muted-foreground">
                 <p>{SITE.name} — {SITE.role}</p>
-                <p>Atendimento em estúdio, somente com horário agendado.</p>
-                <p>
-                  O endereço completo é enviado no WhatsApp após a confirmação do seu agendamento.
-                </p>
+                <p>Rua Doutor Elísio de Castro, 336 — Ipiranga, São Paulo</p>
+                <p>Atendimento somente com horário agendado.</p>
               </div>
-              <Link to="/agendar" className="btn-outline-ink mt-10">
-                Agendar horário
-              </Link>
+
+              <div className="mt-10 flex flex-wrap gap-4">
+                <Link to="/agendar" className="btn-outline-ink">
+                  Agendar horário
+                </Link>
+
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Rua+Doutor+Elisio+de+Castro+336+Ipiranga+Sao+Paulo"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn-outline-ink"
+                >
+                  Como chegar
+                </a>
+              </div>
             </Reveal>
 
             <Reveal delay={150}>
