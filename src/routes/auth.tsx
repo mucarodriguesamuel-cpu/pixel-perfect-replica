@@ -24,7 +24,7 @@ export const Route = createFileRoute("/auth")({
 
 function Auth() {
   const navigate = useNavigate();
-  const [mode, setMode] = useState<"entrar" | "criar">("entrar");
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
@@ -44,28 +44,15 @@ function Auth() {
       return;
     }
     setLoading(true);
-    if (mode === "entrar") {
-      const { error } = await supabase.auth.signInWithPassword({ email, password });
-      setLoading(false);
-      if (error) {
-        toast.error("E-mail ou senha inválidos.");
-        return;
-      }
-      navigate({ to: "/admin" });
-    } else {
-      const { error } = await supabase.auth.signUp({
-        email,
-        password,
-        options: { emailRedirectTo: `${window.location.origin}/admin` },
-      });
-      setLoading(false);
-      if (error) {
-        toast.error(error.message);
-        return;
-      }
-      toast.success("Conta criada. Você já pode entrar.");
-      setMode("entrar");
-    }
+    const { error } = await supabase.auth.signInWithPassword({ email, password });
+setLoading(false);
+
+if (error) {
+  toast.error("E-mail ou senha inválidos.");
+  return;
+}
+
+navigate({ to: "/admin" });
   }
 
   return (
@@ -94,7 +81,7 @@ function Auth() {
             onChange={(e) => setEmail(e.target.value)}
             required
           />
-          <input
+          Acessar agenda
             className="field-line"
             type="password"
             placeholder="Senha"
