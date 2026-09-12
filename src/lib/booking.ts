@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
-import { isSupabaseConfigured, supabase } from "@/integrations/supabase/client";
+import { supabase } from "@/integrations/supabase/client";
+import { isSupabaseConfigured } from "@/lib/supabase-configured";
 
 export type Service = {
   id: string;
