@@ -67,8 +67,8 @@ navigate({ to: "/admin" });
             agendamentos.
           </div>
         )}
-        <h1 className="mt-8 font-display text-4xl">
-          {mode === "entrar" ? "Acessar agenda" : "Criar acesso"}
+           <h1 className="mt-8 font-display text-4xl">
+          Acessar agenda
         </h1>
         <span className="hairline mt-6 w-20" />
 
@@ -81,7 +81,8 @@ navigate({ to: "/admin" });
             onChange={(e) => setEmail(e.target.value)}
             required
           />
-          Acessar agenda
+
+          <input
             className="field-line"
             type="password"
             placeholder="Senha"
@@ -90,8 +91,9 @@ navigate({ to: "/admin" });
             minLength={6}
             required
           />
+
           <button type="submit" className="btn-ink w-full" disabled={loading}>
-            {loading ? "Aguarde…" : mode === "entrar" ? "Entrar" : "Criar conta"}
+            {loading ? "Aguarde…" : "Entrar"}
           </button>
         </form>
 
