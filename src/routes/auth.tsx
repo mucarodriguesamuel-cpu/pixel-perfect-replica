@@ -107,7 +107,13 @@ navigate({ to: "/admin" });
             minLength={6}
             required
           />
-
+<button
+  type="button"
+  onClick={resetPassword}
+  className="w-full text-sm text-muted-foreground underline underline-offset-4"
+>
+  Esqueci minha senha
+</button>
           <button type="submit" className="btn-ink w-full" disabled={loading}>
             {loading ? "Aguarde…" : "Entrar"}
           </button>
