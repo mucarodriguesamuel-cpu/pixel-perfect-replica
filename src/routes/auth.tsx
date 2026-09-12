@@ -54,7 +54,23 @@ if (error) {
 
 navigate({ to: "/admin" });
   }
+  async function resetPassword() {
+    if (!email) {
+      toast.error("Digite seu e-mail primeiro.");
+      return;
+    }
 
+    const { error } = await supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: "https://pixel-perfect-render-9030.lovable.app/reset-password",
+    });
+
+    if (error) {
+      toast.error("Não foi possível enviar o link.");
+      return;
+    }
+
+    toast.success("Link de recuperação enviado para seu e-mail.");
+  }
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-6">
       <div className="w-full max-w-sm">
