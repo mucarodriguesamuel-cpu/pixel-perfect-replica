@@ -108,7 +108,7 @@ function Auth() {
           </button>
         </form>
 
-        <button
+             <button
           type="button"
           className="mt-8 text-xs tracking-[0.2em] text-muted-foreground uppercase"
           onClick={() => setMode(mode === "entrar" ? "criar" : "entrar")}
