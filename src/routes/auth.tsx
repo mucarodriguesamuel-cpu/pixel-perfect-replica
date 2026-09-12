@@ -108,13 +108,7 @@ function Auth() {
           </button>
         </form>
 
-             <button
-          type="button"
-          className="mt-8 text-xs tracking-[0.2em] text-muted-foreground uppercase"
-          onClick={() => setMode(mode === "entrar" ? "criar" : "entrar")}
-        >
-          {mode === "entrar" ? "Primeiro acesso? Criar conta" : "Já tenho conta"}
-        </button>
+           
       </div>
     </div>
   );
