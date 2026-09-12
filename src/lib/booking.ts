@@ -76,7 +76,44 @@ export function useServices() {
         .eq("active", true)
         .order("sort_order");
       if (error) throw error;
-      return data ?? [];
+     return (data ?? [])
+  .filter((service) => {
+    const name = service.name.toLowerCase();
+
+    return (
+      name.includes("alongamento") ||
+      name.includes("banho de gel") ||
+      name.includes("manuten")
+    );
+  })
+  .map((service) => {
+    const name = service.name.toLowerCase();
+
+    if (name.includes("alongamento")) {
+      return {
+        ...service,
+        name: "Alongamento em gel",
+        description:
+          "Alongamentos personalizados que respeitam o formato das mãos e priorizam uma aparência natural, elegante e resistente.",
+      };
+    }
+
+    if (name.includes("banho de gel")) {
+      return {
+        ...service,
+        name: "Banho de gel",
+        description:
+          "Uma camada de estrutura e proteção sobre a unha natural, sem necessidade de alongar.",
+      };
+    }
+
+    return {
+      ...service,
+      name: "Manutenção",
+      description:
+        "Cuidados para preservar a estrutura e o acabamento conforme a unha natural cresce. A frequência varia de acordo com o crescimento e a rotina de cada cliente.",
+    };
+  });
     },
   });
 }
