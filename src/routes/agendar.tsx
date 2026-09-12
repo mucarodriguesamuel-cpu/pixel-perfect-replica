@@ -12,7 +12,7 @@ import {
   SITE,
   whatsappLink,
   formatLongDate,
-  formatPrice,
+  
   formatTime,
   toISODate,
   WEEKDAY_SHORT,
@@ -174,12 +174,7 @@ function Agendar() {
                         <span className="font-display text-2xl">{s.name}</span>
                         <span className="mt-2 block text-sm text-muted-foreground">
                           {s.description}
-                        </span>
-                        {formatPrice(s.price) && (
-  <span className="mt-4 block text-[0.7rem] tracking-[0.2em] uppercase text-muted-foreground">
-    {formatPrice(s.price)}
-  </span>
-)}
+     
                       </button>
                     );
                   })}
