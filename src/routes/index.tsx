@@ -841,8 +841,8 @@ function Home() {
             <summary className="flex cursor-pointer list-none items-center justify-between gap-8 font-display text-xl md:text-2xl">
               {item.q}
               <span className="text-gold transition-transform group-open:rotate-45">
-                +
-              </span>
+                      title="Mapa — Rua Doutor Elísio de Castro, 336"
+                  src="https://www.google.com/maps?q=Rua%20Doutor%20El%C3%ADsio%20de%20Castro%2C%20336%20-%20Ipiranga%2C%20S%C3%A3o%20Paulo&output=embed"
             </summary>
 
             <p className="mt-5 max-w-3xl pr-8 text-sm leading-[1.9] text-muted-foreground">
