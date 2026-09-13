@@ -91,7 +91,11 @@ const [blockTime, setBlockTime] = useState("");
         .order("appointment_date")
         .order("appointment_time");
 
-      if (filter === "proximos") q = q.gte("appointment_date", toISODate(new Date()));
+      if (filter === "proximos") {
+        q = q
+          .gte("appointment_date", toISODate(new Date()))
+          .in("status", ["pendente", "confirmado"]);
+      }
       else if (filter !== "todos") q = q.eq("status", filter);
 
       const { data, error } = await q;
@@ -121,8 +125,16 @@ const [blockTime, setBlockTime] = useState("");
       return;
     }
     toast.success(`Agendamento ${STATUS_LABEL[status].toLowerCase()}.`);
-    if (status === "cancelado") setFilter("cancelado");
-    qc.invalidateQueries({ queryKey: ["appointments"] });
+    qc.setQueriesData<Appointment[]>({ queryKey: ["appointments"] }, (current) => {
+      if (!current) return current;
+      return current.map((appointment) =>
+        appointment.id === id ? { ...appointment, status } : appointment,
+      );
+    });
+    if (status === "cancelado") {
+      setFilter("cancelado");
+    }
+    await qc.invalidateQueries({ queryKey: ["appointments"] });
   }
 
  async function addBlock() {
