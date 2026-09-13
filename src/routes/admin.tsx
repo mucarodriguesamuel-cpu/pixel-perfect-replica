@@ -82,6 +82,9 @@ const [blockTime, setBlockTime] = useState("");
   const appointments = useQuery({
     queryKey: ["appointments", filter],
     enabled: ready,
+    refetchOnMount: "always",
+    refetchOnWindowFocus: "always",
+    refetchInterval: 5_000,
     queryFn: async (): Promise<Appointment[]> => {
       let q = supabase
         .from("appointments")
