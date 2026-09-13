@@ -121,6 +121,7 @@ const [blockTime, setBlockTime] = useState("");
       return;
     }
     toast.success(`Agendamento ${STATUS_LABEL[status].toLowerCase()}.`);
+    if (status === "cancelado") setFilter("cancelado");
     qc.invalidateQueries({ queryKey: ["appointments"] });
   }
 
