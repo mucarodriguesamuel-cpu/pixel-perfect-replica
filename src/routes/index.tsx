@@ -139,34 +139,31 @@ function Home() {
           16 anos dedicados à arte de transformar unhas.
         </h2>
 
-        <div className="mt-10 space-y-6 text-[0.98rem] leading-[1.9] text-muted-foreground">
-          <p>
-            Há 16 anos, comecei minha trajetória no universo das unhas. Ao longo desse tempo,
-            meu trabalho foi sendo aperfeiçoado através da prática, do estudo e, principalmente,
-            da observação de cada tipo de unha e das necessidades de cada cliente.
-          </p>
+ <div className="mt-10 space-y-6 text-[0.98rem] leading-[1.9] text-muted-foreground">
+  <p>
+    Ao longo de 16 anos de carreira, fui aprimorando meu olhar, minha técnica e a forma de construir cada unha.
+  </p>
 
-          <p>
-            Com o passar dos anos, percebi que meu trabalho não deveria estar simplesmente
-            relacionado a deixar as unhas mais longas. Eu queria desenvolver uma técnica em que
-            o alongamento pudesse ser bonito, estruturado e resistente, mas sem perder a delicadeza.
-          </p>
+  <p>
+    Com o tempo, entendi que o verdadeiro luxo está naquilo que é bem executado: uma unha elegante, leve, proporcional e resistente, sem excessos.
+  </p>
 
-          <p>
-            Foi assim que minha forma de trabalhar foi se tornando cada vez mais voltada para
-            aquilo que hoje chamo de <strong className="font-normal text-foreground">Técnica da Naturalidade</strong>.
-          </p>
+  <p>
+    Foi dessa busca constante por excelência que nasceu a <strong className="font-normal text-foreground">Técnica da Naturalidade</strong> — uma técnica desenvolvida por mim a partir de anos de estudo, prática e aperfeiçoamento.
+  </p>
 
-          <p>
-            Uma construção pensada para respeitar o formato das mãos, a estrutura das unhas e
-            a proporção de cada cliente.
-          </p>
-        </div>
+  <p>
+    Cada construção é pensada individualmente, respeitando o formato das mãos, a estrutura das unhas e as proporções de cada cliente. O resultado é uma extensão sofisticada, delicada e cuidadosamente estruturada, integrada à beleza natural das mãos.
+  </p>
 
-        <blockquote className="mt-12 border-l border-gold pl-7 font-display text-2xl italic leading-relaxed md:text-3xl">
-          Porque uma unha bem feita não precisa chamar atenção pelo excesso.
-          Ela chama atenção pela qualidade do acabamento.
-        </blockquote>
+  <p>
+    Porque sofisticação não está no excesso. Está na precisão, na leveza e na qualidade de cada detalhe.
+  </p>
+</div>
+
+<blockquote className="mt-12 border-l border-gold pl-7 font-display text-2xl italic leading-relaxed md:text-3xl">
+  Uma unha bem feita não precisa chamar atenção pelo excesso. Ela se revela na qualidade do acabamento, na leveza da construção e na harmonia de cada detalhe.
+</blockquote>
       </div>
     </Reveal>
   </div>
