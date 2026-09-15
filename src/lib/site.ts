@@ -3,8 +3,8 @@ export const SITE = {
   role: "Nail Designer",
 city: "Ipiranga — São Paulo",
   neighborhood: "Ipiranga",
-  whatsappNumber: "5511930089735",
-  whatsappDisplay: "(11) 93008-9735",
+  whatsappNumber: "5511926195646",
+whatsappDisplay: "(11) 92619-5646",
 instagramUrl: "https://www.instagram.com/unhadegel.sp/",
 instagramLabel: "@unhadegel.sp",
 } as const;
