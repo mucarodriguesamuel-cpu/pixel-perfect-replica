@@ -14,6 +14,7 @@ import { Route as AdminRouteImport } from './routes/admin'
 import { Route as AgendarRouteImport } from './routes/agendar'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
+import { Route as PrivacidadeRouteImport } from './routes/privacidade'
 import { Route as ResetPasswordRouteImport } from './routes/reset-password'
 
 const IndexRoute = IndexRouteImport.update({
@@ -41,6 +42,11 @@ const PortfolioRoute = PortfolioRouteImport.update({
   path: '/portfolio',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PrivacidadeRoute = PrivacidadeRouteImport.update({
+  id: '/privacidade',
+  path: '/privacidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ResetPasswordRoute = ResetPasswordRouteImport.update({
   id: '/reset-password',
   path: '/reset-password',
@@ -53,6 +59,7 @@ export interface FileRoutesByFullPath {
   '/agendar': typeof AgendarRoute
   '/auth': typeof AuthRoute
   '/portfolio': typeof PortfolioRoute
+  '/privacidade': typeof PrivacidadeRoute
   '/reset-password': typeof ResetPasswordRoute
 }
 export interface FileRoutesByTo {
@@ -61,6 +68,7 @@ export interface FileRoutesByTo {
   '/agendar': typeof AgendarRoute
   '/auth': typeof AuthRoute
   '/portfolio': typeof PortfolioRoute
+  '/privacidade': typeof PrivacidadeRoute
   '/reset-password': typeof ResetPasswordRoute
 }
 export interface FileRoutesById {
@@ -70,14 +78,28 @@ export interface FileRoutesById {
   '/agendar': typeof AgendarRoute
   '/auth': typeof AuthRoute
   '/portfolio': typeof PortfolioRoute
+  '/privacidade': typeof PrivacidadeRoute
   '/reset-password': typeof ResetPasswordRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/admin' | '/agendar' | '/auth' | '/portfolio' | '/reset-password'
+    | '/'
+    | '/admin'
+    | '/agendar'
+    | '/auth'
+    | '/portfolio'
+    | '/privacidade'
+    | '/reset-password'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/admin' | '/agendar' | '/auth' | '/portfolio' | '/reset-password'
+  to:
+    | '/'
+    | '/admin'
+    | '/agendar'
+    | '/auth'
+    | '/portfolio'
+    | '/privacidade'
+    | '/reset-password'
   id:
     | '__root__'
     | '/'
@@ -85,6 +107,7 @@ export interface FileRouteTypes {
     | '/agendar'
     | '/auth'
     | '/portfolio'
+    | '/privacidade'
     | '/reset-password'
   fileRoutesById: FileRoutesById
 }
@@ -94,6 +117,7 @@ export interface RootRouteChildren {
   AgendarRoute: typeof AgendarRoute
   AuthRoute: typeof AuthRoute
   PortfolioRoute: typeof PortfolioRoute
+  PrivacidadeRoute: typeof PrivacidadeRoute
   ResetPasswordRoute: typeof ResetPasswordRoute
 }
 
@@ -134,6 +158,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PortfolioRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/privacidade': {
+      id: '/privacidade'
+      path: '/privacidade'
+      fullPath: '/privacidade'
+      preLoaderRoute: typeof PrivacidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/reset-password': {
       id: '/reset-password'
       path: '/reset-password'
@@ -150,6 +181,7 @@ const rootRouteChildren: RootRouteChildren = {
   AgendarRoute: AgendarRoute,
   AuthRoute: AuthRoute,
   PortfolioRoute: PortfolioRoute,
+  PrivacidadeRoute: PrivacidadeRoute,
   ResetPasswordRoute: ResetPasswordRoute,
 }
 export const routeTree = rootRouteImport

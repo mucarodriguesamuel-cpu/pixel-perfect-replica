@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { Button } from "@/components/ui/button";
 import { DEFAULT_WHATSAPP_MESSAGE, SITE, whatsappLink } from "@/lib/site";
 
 export function SiteFooter() {
@@ -45,9 +46,22 @@ export function SiteFooter() {
           <span>
             © {new Date().getFullYear()} {SITE.name} — {SITE.role}
           </span>
-          <Link to="/auth" className="hover:text-champagne">
-            Acesso da Débora
-          </Link>
+          <div className="flex flex-wrap items-center gap-5">
+            <Link to="/privacidade" className="hover:text-champagne">
+              Privacidade
+            </Link>
+            <Button
+              type="button"
+              variant="link"
+              className="h-auto p-0 text-[0.7rem] font-light tracking-[0.16em] text-espresso-foreground/50 uppercase hover:text-champagne"
+              onClick={() => window.dispatchEvent(new Event("open-cookie-settings"))}
+            >
+              Preferências de cookies
+            </Button>
+            <Link to="/auth" className="hover:text-champagne">
+              Acesso da Débora
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
