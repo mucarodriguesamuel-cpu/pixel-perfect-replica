@@ -36,7 +36,7 @@ function PrivacyPage() {
             A medição pode envolver identificadores do navegador, informações do dispositivo, páginas visitadas e interações com o site. Não enviamos nome, telefone, e-mail ou observações do agendamento como parâmetros comuns de anúncios.
           </p>
           <p>
-            Nas regiões em que o consentimento é necessário, a tag permanece bloqueada até a aceitação. A recusa não impede o uso do site nem o agendamento. Sua escolha fica registrada neste navegador com a data, a finalidade e a versão do aviso apresentado.
+            Nas regiões em que o consentimento é necessário, a tag é carregada com a permissão de publicidade negada por padrão e não utiliza armazenamento publicitário até a aceitação. A recusa não impede o uso do site nem o agendamento. Sua escolha fica registrada neste navegador com a data, a finalidade e a versão do aviso apresentado.
           </p>
           <p>
             Você pode retirar ou conceder o consentimento a qualquer momento. A alteração vale para novas interações e não envia retroativamente eventos bloqueados.

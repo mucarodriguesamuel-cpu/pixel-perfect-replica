@@ -4,10 +4,11 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
+  useLocation,
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -96,6 +97,24 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     scripts: [
       {
+        children: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+window.gtag = gtag;
+gtag('consent', 'default', {
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+  analytics_storage: 'denied',
+  wait_for_update: 500
+});
+gtag('js', new Date());
+gtag('config', 'AW-18155793500');`,
+      },
+      {
+        src: "https://www.googletagmanager.com/gtag/js?id=AW-18155793500",
+        async: true,
+      },
+      {
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
@@ -152,8 +171,29 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
+      <GoogleAdsPageViews />
       <GoogleAdsConsent />
       <Toaster position="top-center" />
     </QueryClientProvider>
   );
+}
+
+function GoogleAdsPageViews() {
+  const pathname = useLocation({ select: (location) => location.pathname });
+  const firstPage = useRef(true);
+
+  useEffect(() => {
+    // The initial page view is sent by the global config in the head.
+    if (firstPage.current) {
+      firstPage.current = false;
+      return;
+    }
+    window.gtag?.("event", "page_view", {
+      page_path: pathname,
+      page_location: `${window.location.origin}${pathname}`,
+      page_title: document.title,
+    });
+  }, [pathname]);
+
+  return null;
 }

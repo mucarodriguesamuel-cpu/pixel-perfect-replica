@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 
-const GOOGLE_ADS_ID = "AW-18155793500";
 const CONSENT_STORAGE_KEY = "debora-tonani-ad-consent";
 const NOTICE_VERSION = "2026-09-23";
 const CONSENT_REGIONS = new Set([
@@ -53,34 +52,13 @@ function writeConsent(choice: ConsentChoice) {
   window.localStorage.setItem(CONSENT_STORAGE_KEY, JSON.stringify(record));
 }
 
-function ensureGtag() {
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = window.gtag || function gtag(...args: unknown[]) {
-    window.dataLayer.push(args);
-  };
-}
-
 function setGoogleConsent(granted: boolean) {
-  ensureGtag();
   window.gtag("consent", "update", {
     ad_storage: granted ? "granted" : "denied",
     ad_user_data: granted ? "granted" : "denied",
     ad_personalization: granted ? "granted" : "denied",
     analytics_storage: "denied",
   });
-}
-
-function loadGoogleTag() {
-  ensureGtag();
-  if (!document.querySelector(`script[data-google-ads-id="${GOOGLE_ADS_ID}"]`)) {
-    const script = document.createElement("script");
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`;
-    script.dataset.googleAdsId = GOOGLE_ADS_ID;
-    document.head.appendChild(script);
-  }
-  window.gtag("js", new Date());
-  window.gtag("config", GOOGLE_ADS_ID);
 }
 
 function lookupRegion() {
@@ -113,18 +91,8 @@ export function GoogleAdsConsent() {
   const [showBanner, setShowBanner] = useState(false);
 
   useEffect(() => {
-    ensureGtag();
-    window.gtag("consent", "default", {
-      ad_storage: "denied",
-      ad_user_data: "denied",
-      ad_personalization: "denied",
-      analytics_storage: "denied",
-      wait_for_update: 500,
-    });
-
     const applyChoice = (choice: ConsentChoice) => {
       setGoogleConsent(choice === "accepted");
-      if (choice === "accepted") loadGoogleTag();
       setShowBanner(false);
     };
 
@@ -138,7 +106,6 @@ export function GoogleAdsConsent() {
           return;
         }
         setGoogleConsent(true);
-        loadGoogleTag();
       });
     }
 
@@ -159,7 +126,6 @@ export function GoogleAdsConsent() {
   function choose(choice: ConsentChoice) {
     writeConsent(choice);
     setGoogleConsent(choice === "accepted");
-    if (choice === "accepted") loadGoogleTag();
     setShowBanner(false);
   }
 
