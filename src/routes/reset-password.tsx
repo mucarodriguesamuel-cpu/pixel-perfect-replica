@@ -4,6 +4,16 @@ import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 
 export const Route = createFileRoute("/reset-password")({
+  head: () => ({
+    meta: [
+      { title: "Criar nova senha — Débora Tonani" },
+      { name: "description", content: "Recuperação de acesso à área da profissional Débora Tonani." },
+      { property: "og:title", content: "Criar nova senha — Débora Tonani" },
+      { property: "og:description", content: "Recuperação de acesso à área da profissional Débora Tonani." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
+    ],
+  }),
   component: ResetPassword,
 });
 
