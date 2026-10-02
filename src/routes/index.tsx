@@ -58,36 +58,34 @@ function Home() {
               </Reveal>
 
    <Reveal delay={120}>
-  <h1 className="mt-8 max-w-4xl font-display text-[clamp(3rem,7.5vw,6rem)] leading-[0.95] tracking-[-0.025em]">
-    A beleza de uma unha
-    <br />
-    bem construída está
-    <br />
+  <h1 className="mt-6 max-w-4xl font-display text-5xl leading-[1.02] md:mt-8 md:text-6xl lg:text-[5.5rem]">
+    Alongamento de unhas com
+    {" "}
     <em className="text-[color-mix(in_oklab,var(--gold)_78%,var(--espresso))]">
-      nos detalhes.
+      naturalidade.
     </em>
   </h1>
 </Reveal>
 
 <Reveal delay={220}>
-  <p className="mt-8 text-xs font-medium tracking-[0.22em] uppercase text-foreground/70">
+  <p className="mt-6 text-xs font-medium tracking-[0.22em] uppercase text-foreground/70 md:mt-8">
     Especialista em alongamento de unhas há 16 anos
   </p>
 
-  <p className="mt-5 max-w-xl text-[0.98rem] leading-relaxed text-muted-foreground">
+  <p className="mt-4 max-w-xl text-[0.98rem] leading-relaxed text-muted-foreground">
     Alongamentos naturais e resistentes, feitos para valorizar as suas mãos. Atendimento individual no Ipiranga.
   </p>
 </Reveal>
 
 <Reveal delay={320}>
-  <div className="mt-10">
+  <div className="mt-7 md:mt-10">
     <Link to="/agendar" className="btn-ink">
       Agendar meu horário
     </Link>
   </div>
 </Reveal>
               <Reveal delay={420}>
-                <div className="mt-12 flex items-center gap-4">
+                <div className="mt-7 flex items-center gap-4 md:mt-12">
                   <span className="h-px w-10 bg-gold/70" />
                   <span className="text-[0.7rem] tracking-[0.28em] text-muted-foreground uppercase">
                     Atendimento em estúdio
