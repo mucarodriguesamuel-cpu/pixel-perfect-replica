@@ -10,3 +10,5 @@
 <!-- LOVABLE:END -->
 
 Keep the single Google Ads gtag.js loader and consent defaults in the root route head; keep consent updates in GoogleAdsConsent and client-side page views in the root component, so every direct route and internal navigation is measured without duplicate loaders.
+
+Reuse one BookingExperience for the home booking section and /agendar so reservation behavior stays identical in both locations.
