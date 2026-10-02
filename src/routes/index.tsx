@@ -3,6 +3,7 @@ import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { WhatsAppButton } from "@/components/site/WhatsAppButton";
 import { Reveal } from "@/components/site/Reveal";
+import { BookingExperience } from "@/components/site/BookingExperience";
 import { SITE } from "@/lib/site";
 import heroImg from "@/assets/hero-maos.jpg";
 import estudioImg from "@/assets/portfolio-6.jpg";
@@ -46,8 +47,8 @@ function Home() {
       <SiteHeader />
       <main>
         {/* HERO */}
-        <section id="inicio" className="relative min-h-[100svh] overflow-hidden pt-28 md:pt-32">
-          <div className="mx-auto grid max-w-[1400px] items-center gap-12 px-6 pb-16 md:px-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8 lg:pb-24">
+        <section id="inicio" className="relative overflow-hidden pt-28 md:pt-32">
+          <div className="mx-auto grid max-w-[1400px] items-center gap-10 px-6 pb-12 md:px-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8 lg:pb-16">
             <div className="lg:pr-10">
               <Reveal>
                 <p className="eyebrow">
@@ -74,8 +75,7 @@ function Home() {
   </p>
 
   <p className="mt-5 max-w-xl text-[0.98rem] leading-relaxed text-muted-foreground">
-    Uma técnica desenvolvida através de experiência, estudo e aperfeiçoamento para criar
-    unhas elegantes, leves, resistentes e em harmonia com cada mão.
+    Alongamentos naturais e resistentes, feitos para valorizar as suas mãos. Atendimento individual no Ipiranga.
   </p>
 </Reveal>
 
@@ -105,7 +105,7 @@ function Home() {
                     alt="Mãos com alongamento de unhas natural em tom nude sobre seda champagne"
                     width={1008}
                     height={1504}
-                    className="h-[58vh] w-full object-cover object-center sm:h-[70vh] lg:h-[86vh]"
+                    className="h-[46vh] w-full object-cover object-center sm:h-[58vh] lg:h-[70vh]"
                   />
                   <figcaption className="absolute -bottom-4 -left-4 hidden bg-background px-6 py-4 lg:block">
                     <span className="text-[0.65rem] tracking-[0.3em] text-muted-foreground uppercase">
@@ -118,6 +118,68 @@ function Home() {
           </div>
         </section>
 
+        {/* PORTFÓLIO */}
+        <section id="portfolio" className="scroll-mt-24">
+          <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-10 md:py-36">
+            <Reveal>
+              <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+                <div>
+                  <p className="eyebrow">Portfólio</p>
+                  <h2 className="mt-6 font-display text-[clamp(2.2rem,5vw,4rem)] leading-[1.05]">
+                    Trabalhos que falam por si
+                  </h2>
+                </div>
+                <Link
+                  to="/portfolio"
+                  className="inline-flex items-center gap-3 text-[0.7rem] tracking-[0.24em] uppercase"
+                >
+                  <span className="border-b border-gold/60 pb-1">Ver mais trabalhos</span>
+                  <span>→</span>
+                </Link>
+              </div>
+            </Reveal>
+
+            <div className="mt-16 grid grid-cols-12 gap-4 md:gap-7">
+              <Reveal className="col-span-12 md:col-span-7">
+                <img
+                  src={p2}
+                  alt="Alongamentos de unha em tom branco leitoso sobre linho cru"
+                  loading="lazy"
+                  className="h-[38vh] w-full object-cover md:h-[52vh]"
+                />
+              </Reveal>
+              <Reveal delay={120} className="col-span-7 md:col-span-5 md:mt-16">
+                <img
+                  src={p3}
+                  alt="Mãos com alongamento nude e francesinha delicada sobre veludo marrom"
+                  loading="lazy"
+                  className="h-[34vh] w-full object-cover md:h-[60vh]"
+                />
+              </Reveal>
+              <Reveal delay={80} className="col-span-5 md:col-span-4 md:-mt-10">
+                <img
+                  src={p1}
+                  alt="Fita de seda e esmalte nude sobre pedra bege"
+                  loading="lazy"
+                  className="h-[34vh] w-full object-cover md:h-[46vh]"
+                />
+              </Reveal>
+              <Reveal delay={160} className="col-span-12 md:col-span-8">
+                <img
+                  src={p5}
+                  alt="Unhas naturais em tom nude sobre tricô bege"
+                  loading="lazy"
+                  className="h-[42vh] w-full object-cover md:h-[58vh]"
+                />
+              </Reveal>
+            </div>
+          </div>
+        </section>
+
+        {/* AGENDAMENTO — terceira seção */}
+        <section id="agendamento" className="scroll-mt-24 bg-background">
+          <BookingExperience embedded />
+        </section>
    {/* SOBRE DÉBORA */}
 <section id="sobre" className="scroll-mt-24 bg-sand">
   <div className="mx-auto grid max-w-[1400px] gap-14 px-6 py-24 md:px-10 md:py-36 lg:grid-cols-[0.7fr_1.3fr] lg:gap-24">
@@ -273,7 +335,7 @@ function Home() {
               to="/agendar"
               className="mt-8 inline-flex border-b border-foreground/30 pb-1 text-[0.7rem] tracking-[0.2em] uppercase"
             >
-              Conhecer o procedimento
+              Reservar horário
             </Link>
           </div>
         </Reveal>
@@ -664,64 +726,6 @@ function Home() {
     </Reveal>
   </div>
 </section>
-        {/* PORTFÓLIO */}
-        <section id="portfolio" className="scroll-mt-24">
-          <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-10 md:py-36">
-            <Reveal>
-              <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-                <div>
-                  <p className="eyebrow">Portfólio</p>
-                  <h2 className="mt-6 font-display text-[clamp(2.2rem,5vw,4rem)] leading-[1.05]">
-                    Trabalhos que falam por si
-                  </h2>
-                </div>
-                <Link
-                  to="/portfolio"
-                  className="inline-flex items-center gap-3 text-[0.7rem] tracking-[0.24em] uppercase"
-                >
-                  <span className="border-b border-gold/60 pb-1">Ver mais trabalhos</span>
-                  <span>→</span>
-                </Link>
-              </div>
-            </Reveal>
-
-            <div className="mt-16 grid grid-cols-12 gap-4 md:gap-7">
-              <Reveal className="col-span-12 md:col-span-7">
-                <img
-                  src={p2}
-                  alt="Alongamentos de unha em tom branco leitoso sobre linho cru"
-                  loading="lazy"
-                  className="h-[38vh] w-full object-cover md:h-[52vh]"
-                />
-              </Reveal>
-              <Reveal delay={120} className="col-span-7 md:col-span-5 md:mt-16">
-                <img
-                  src={p3}
-                  alt="Mãos com alongamento nude e francesinha delicada sobre veludo marrom"
-                  loading="lazy"
-                  className="h-[34vh] w-full object-cover md:h-[60vh]"
-                />
-              </Reveal>
-              <Reveal delay={80} className="col-span-5 md:col-span-4 md:-mt-10">
-                <img
-                  src={p1}
-                  alt="Fita de seda e esmalte nude sobre pedra bege"
-                  loading="lazy"
-                  className="h-[34vh] w-full object-cover md:h-[46vh]"
-                />
-              </Reveal>
-              <Reveal delay={160} className="col-span-12 md:col-span-8">
-                <img
-                  src={p5}
-                  alt="Unhas naturais em tom nude sobre tricô bege"
-                  loading="lazy"
-                  className="h-[42vh] w-full object-cover md:h-[58vh]"
-                />
-              </Reveal>
-            </div>
-          </div>
-        </section>
-
     {/* ATENDIMENTO EXCLUSIVO + EXPERIÊNCIA */}
 <section id="experiencia" className="scroll-mt-24 bg-espresso text-espresso-foreground">
   <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-10 md:py-36">
