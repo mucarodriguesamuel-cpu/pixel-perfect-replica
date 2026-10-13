@@ -9,3 +9,4 @@
 
 - [x] Antecipar fotos de trabalhos e agendamento para as primeiras três seções, reaproveitando a agenda existente.
 - [x] Enxugar a apresentação inicial sem trocar fotos nem alterar as regras de reserva.
+- [x] Substituir a tag anterior pela AW-18034410595 enviada pela cliente e verificar páginas e navegação interna.
