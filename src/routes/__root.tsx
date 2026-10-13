@@ -7,6 +7,7 @@ import {
   useLocation,
   HeadContent,
   Scripts,
+  type ErrorComponentProps,
 } from "@tanstack/react-router";
 import { useEffect, useRef, type ReactNode } from "react";
 
@@ -34,7 +35,7 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+function ErrorComponent({ error, reset }: ErrorComponentProps) {
   console.error(error);
   const router = useRouter();
   useEffect(() => {
@@ -108,10 +109,10 @@ gtag('consent', 'default', {
   wait_for_update: 500
 });
 gtag('js', new Date());
-gtag('config', 'AW-18155793500');`,
+gtag('config', 'AW-18034410595');`,
       },
       {
-        src: "https://www.googletagmanager.com/gtag/js?id=AW-18155793500",
+        src: "https://www.googletagmanager.com/gtag/js?id=AW-18034410595",
         async: true,
       },
       {
