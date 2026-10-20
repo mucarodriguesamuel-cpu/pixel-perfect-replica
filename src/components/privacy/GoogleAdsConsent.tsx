@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { AD_CONSENT_STORAGE_KEY, setAdvertisingPermission } from "@/lib/google-ads-conversions";
 
 const CONSENT_STORAGE_KEY = AD_CONSENT_STORAGE_KEY;
-const NOTICE_VERSION = "2026-09-23";
+const NOTICE_VERSION = "2026-10-20";
 const CONSENT_REGIONS = new Set([
   "AT", "BE", "BG", "BR", "CH", "CY", "CZ", "DE", "DK", "EE", "ES", "FI", "FR",
   "GB", "GR", "HR", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MT", "NL",
