@@ -15,6 +15,7 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Toaster } from "@/components/ui/sonner";
 import { GoogleAdsConsent } from "@/components/privacy/GoogleAdsConsent";
+import { GoogleAdsContactConversions } from "@/components/privacy/GoogleAdsContactConversions";
 
 function NotFoundComponent() {
   return (
@@ -174,6 +175,7 @@ function RootComponent() {
       <Outlet />
       <GoogleAdsPageViews />
       <GoogleAdsConsent />
+      <GoogleAdsContactConversions />
       <Toaster position="top-center" />
     </QueryClientProvider>
   );
