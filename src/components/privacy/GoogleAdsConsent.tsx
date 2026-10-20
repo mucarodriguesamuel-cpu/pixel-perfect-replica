@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
+import { AD_CONSENT_STORAGE_KEY, setAdvertisingPermission } from "@/lib/google-ads-conversions";
 
-const CONSENT_STORAGE_KEY = "debora-tonani-ad-consent";
+const CONSENT_STORAGE_KEY = AD_CONSENT_STORAGE_KEY;
 const NOTICE_VERSION = "2026-09-23";
 const CONSENT_REGIONS = new Set([
   "AT", "BE", "BG", "BR", "CH", "CY", "CZ", "DE", "DK", "EE", "ES", "FI", "FR",
@@ -53,6 +54,7 @@ function writeConsent(choice: ConsentChoice) {
 }
 
 function setGoogleConsent(granted: boolean) {
+  setAdvertisingPermission(granted);
   window.gtag("consent", "update", {
     ad_storage: granted ? "granted" : "denied",
     ad_user_data: granted ? "granted" : "denied",
@@ -139,7 +141,7 @@ export function GoogleAdsConsent() {
       <div className="min-w-0 flex-1">
         <p className="font-display text-2xl leading-tight">Sua privacidade</p>
         <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-          Podemos usar a tag do Google Ads para medir resultados de anúncios. Você pode aceitar ou
+          Podemos usar a tag do Google Ads para medir resultados de anúncios, incluindo cliques no WhatsApp. Você pode aceitar ou
           recusar agora e mudar sua escolha depois. <Link to="/privacidade" className="underline underline-offset-4">Saiba mais</Link>.
         </p>
       </div>

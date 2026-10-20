@@ -31,12 +31,14 @@ function PrivacyPage() {
         <div className="mt-10 space-y-6 text-base leading-8 text-muted-foreground">
           <p>
             Este site utiliza a tag do Google Ads para medir ações realizadas após a visualização ou o clique em anúncios. O destinatário desses dados é o Google Ads.
+            A conversão “Contato” registra o clique nos links de WhatsApp do atendimento, não o envio de uma mensagem nem um agendamento confirmado. Esses dados podem ser usados para medir e otimizar anúncios.
           </p>
           <p>
             A medição pode envolver identificadores do navegador, informações do dispositivo, páginas visitadas e interações com o site. Não enviamos nome, telefone, e-mail ou observações do agendamento como parâmetros comuns de anúncios.
           </p>
           <p>
             Nas regiões em que o consentimento é necessário, a tag é carregada com a permissão de publicidade negada por padrão e não utiliza armazenamento publicitário até a aceitação. A recusa não impede o uso do site nem o agendamento. Sua escolha fica registrada neste navegador com a data, a finalidade e a versão do aviso apresentado.
+            O evento de conversão do WhatsApp não é enviado enquanto a permissão estiver negada ou indefinida. Fora dessas regiões, a medição fica habilitada, respeitando uma recusa registrada.
           </p>
           <p>
             Você pode retirar ou conceder o consentimento a qualquer momento. A alteração vale para novas interações e não envia retroativamente eventos bloqueados.
