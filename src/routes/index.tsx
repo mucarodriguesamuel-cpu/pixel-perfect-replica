@@ -49,7 +49,7 @@ function Home() {
       <SiteHeader />
       <main>
         {/* HERO — editorial, fotografia protagonista */}
-        <section id="inicio" className="relative overflow-hidden">
+        <section id="inicio" className="theme-wine relative overflow-hidden">
           <div className="mx-auto grid max-w-[1400px] items-end gap-10 px-6 pt-32 pb-16 md:px-10 md:pt-40 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14 lg:pb-24">
             <div className="lg:pb-10">
               <Reveal>
@@ -169,7 +169,7 @@ function Home() {
         </section>
 
         {/* TÉCNICA DA NATURALIDADE — técnica autoral */}
-        <section id="tecnica" className="scroll-mt-24 bg-background">
+        <section id="tecnica" className="scroll-mt-24 theme-wine">
           <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-10 md:py-40">
             <div className="grid gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-24">
               <Reveal>
@@ -303,7 +303,7 @@ function Home() {
         </section>
 
         {/* PROCEDIMENTOS — lista editorial numerada, sem preços */}
-        <section id="procedimentos" className="scroll-mt-24 bg-background">
+        <section id="procedimentos" className="scroll-mt-24 theme-wine">
           <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-10 md:py-40">
             <Reveal>
               <p className="eyebrow">Procedimentos</p>
@@ -363,7 +363,7 @@ function Home() {
         </section>
 
         {/* EXPERIÊNCIA — exclusividade e cuidado */}
-        <section id="experiencia" className="scroll-mt-24 bg-espresso text-espresso-foreground">
+        <section id="experiencia" className="scroll-mt-24 theme-cream bg-espresso text-espresso-foreground">
           <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-10 md:py-40">
             <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
               <Reveal>
@@ -464,7 +464,7 @@ function Home() {
         </section>
 
         {/* LOCALIZAÇÃO */}
-        <section id="localizacao" className="scroll-mt-24 bg-sand">
+        <section id="localizacao" className="scroll-mt-24 theme-wine">
           <div className="mx-auto grid max-w-[1400px] gap-12 px-6 py-24 md:px-10 md:py-32 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
             <Reveal>
               <p className="eyebrow">Onde encontrar</p>
@@ -516,7 +516,7 @@ function Home() {
         </section>
 
         {/* CHAMADA FINAL */}
-        <section id="contato" className="scroll-mt-24 bg-espresso text-espresso-foreground">
+        <section id="contato" className="scroll-mt-24 theme-cream bg-espresso text-espresso-foreground">
           <div className="mx-auto max-w-[1100px] px-6 py-28 text-center md:px-10 md:py-44">
             <Reveal>
               <p className="eyebrow text-espresso-foreground/50">Agendamento</p>

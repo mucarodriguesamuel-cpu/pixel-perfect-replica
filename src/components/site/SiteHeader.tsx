@@ -35,7 +35,7 @@ export function SiteHeader({ tone = "dark" }: { tone?: "dark" | "light" }) {
   const overDark = tone === "dark" && !solid && pathname === "/";
 
   return (
-    <header
+    <header data-theme="wine"
       className={`fixed inset-x-0 top-0 z-40 transition-colors duration-500 ${
         solid ? "bg-background/95 shadow-[0_10px_40px_-20px_rgba(60,30,30,0.25)] backdrop-blur-sm" : "bg-transparent"
       }`}
