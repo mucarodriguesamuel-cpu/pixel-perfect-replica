@@ -111,6 +111,7 @@ gtag('consent', 'default', {
 });
 gtag('js', new Date());
 gtag('config', 'AW-18034410595');`,
+gtag('config', 'AW-18155793500');
       },
       {
         src: "https://www.googletagmanager.com/gtag/js?id=AW-18034410595",
