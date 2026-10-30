@@ -12,3 +12,4 @@
 - [x] Substituir a tag anterior pela AW-18034410595 enviada pela cliente e verificar páginas e navegação interna.
 - [x] Medir a conversão Contato somente em cliques das visitantes no WhatsApp, preservando a tag única e o consentimento.
 - [x] Verificar envio permitido, bloqueio na recusa e navegação interna; informar arquivos e teste no Google Ads.
+- [x] Redesign premium da página inicial: hero editorial, 16 anos, Técnica da Naturalidade, galeria grande, procedimentos numerados, experiência e chamada final pelo WhatsApp.
