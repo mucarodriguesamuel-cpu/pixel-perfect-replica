@@ -60,52 +60,69 @@
 
 :root {
   --radius: 0.125rem;
-
- --background: #E8DDD4;
---foreground: #2A211E;
-
---card: #F3EAE3;
---card-foreground: #2A211E;
---popover: #F3EAE3;
---popover-foreground: #2A211E;
-
-  --primary: oklch(0.31 0.031 48);
-  --primary-foreground: oklch(0.972 0.008 84);
-
-  --secondary: oklch(0.935 0.014 82);
-  --secondary-foreground: oklch(0.31 0.031 48);
-
-  --muted: oklch(0.94 0.012 82);
-  --muted-foreground: oklch(0.5 0.02 58);
-
-  --accent: oklch(0.86 0.038 78);
-  --accent-foreground: oklch(0.28 0.024 52);
-
+  --background: #F5EEE8;
+  --foreground: #292124;
+  --card: #FBF6F1;
+  --card-foreground: #292124;
+  --popover: #FBF6F1;
+  --popover-foreground: #292124;
+  --primary: #421D2C;
+  --primary-foreground: #F5EEE8;
+  --secondary: #A66B78;
+  --secondary-foreground: #F5EEE8;
+  --muted: #EDE2D9;
+  --muted-foreground: color-mix(in oklab, #292124 68%, #F5EEE8);
+  --accent: #D8B982;
+  --accent-foreground: #292124;
   --destructive: oklch(0.52 0.13 28);
-  --destructive-foreground: oklch(0.98 0.005 84);
-
-  --border: oklch(0.88 0.014 80);
-  --input: oklch(0.88 0.014 80);
-  --ring: oklch(0.74 0.06 80);
-
-  --sand: oklch(0.945 0.015 82);
-  --nude: oklch(0.885 0.03 70);
-  --champagne: oklch(0.895 0.04 88);
-  --gold: oklch(0.74 0.075 82);
-  --rose: oklch(0.82 0.055 25);
-  --rosewood: oklch(0.52 0.075 22);
-  --espresso: oklch(0.245 0.022 52);
-  --espresso-foreground: oklch(0.94 0.012 82);
-
-  --sidebar: oklch(0.955 0.012 82);
-  --sidebar-foreground: oklch(0.31 0.031 48);
-  --sidebar-primary: oklch(0.31 0.031 48);
-  --sidebar-primary-foreground: oklch(0.972 0.008 84);
-  --sidebar-accent: oklch(0.92 0.018 80);
-  --sidebar-accent-foreground: oklch(0.28 0.024 52);
-  --sidebar-border: oklch(0.88 0.014 80);
-  --sidebar-ring: oklch(0.74 0.06 80);
+  --destructive-foreground: #F5EEE8;
+  --border: color-mix(in oklab, #D8B982 45%, #F5EEE8);
+  --input: color-mix(in oklab, #D8B982 45%, #F5EEE8);
+  --ring: #D8B982;
+  --sand: #F5EEE8;
+  --nude: #EDE2D9;
+  --champagne: #D8B982;
+  --gold: #B8955A;
+  --rose: #A66B78;
+  --rosewood: #421D2C;
+  --espresso: #421D2C;
+  --espresso-foreground: #F5EEE8;
+  --sidebar: #F5EEE8;
+  --sidebar-foreground: #292124;
+  --sidebar-primary: #421D2C;
+  --sidebar-primary-foreground: #F5EEE8;
+  --sidebar-accent: #EDE2D9;
+  --sidebar-accent-foreground: #292124;
+  --sidebar-border: color-mix(in oklab, #D8B982 45%, #F5EEE8);
+  --sidebar-ring: #D8B982;
 }
+
+/* Seções em vinho profundo: os tokens se invertem dentro delas */
+.theme-wine {
+  --background: #421D2C;
+  --foreground: #F5EEE8;
+  --card: #4E2536;
+  --card-foreground: #F5EEE8;
+  --muted: #4E2536;
+  --muted-foreground: color-mix(in oklab, #F5EEE8 74%, #421D2C);
+  --border: color-mix(in oklab, #D8B982 30%, #421D2C);
+  --sand: #421D2C;
+  --gold: #D8B982;
+  --rosewood: #D8B982;
+  --espresso: #F5EEE8;
+  --espresso-foreground: #421D2C;
+  background-color: #421D2C;
+  color: #F5EEE8;
+}
+.theme-wine .btn-ink { color: #292124; }
+
+/* Seções creme onde antes havia fundo escuro */
+.theme-cream {
+  --espresso: #F5EEE8;
+  --espresso-foreground: #292124;
+  --rose: #A66B78;
+}
+.theme-cream .btn-ink, .theme-cream .btn-champagne { background: #421D2C; color: #F5EEE8; }
 
 .dark {
   --background: oklch(0.245 0.022 52);
@@ -199,7 +216,7 @@ body {
   min-height: 3.4rem;
   border-radius: 999px;
   background: var(--rosewood);
-  color: #fff8f4;
+  color: #F5EEE8;
   font-size: 0.76rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
